@@ -1065,36 +1065,24 @@ special.play();
 
 }
 
-/* cuando termina la especial */
 
-document
-.getElementById("specialSong")
-.addEventListener("ended",()=>{
+// Variable para saber si la especial está sonando
+let especialSonando = false;
 
-/* vuelve música normal */
-
-setTimeout(()=>{
-
-playRandomSong();
-
-},3000);
-
+document.getElementById("specialSong").addEventListener("play", () => {
+  especialSonando = true;
 });
 
-function cambiarCancion(){
+document.getElementById("specialSong").addEventListener("ended", () => {
+  especialSonando = false;
+  setTimeout(() => { playRandomSong(); }, 3000);
+});
 
-/* detiene actual */
-
-bgMusic.pause();
-
-/* reinicia */
-
-bgMusic.currentTime = 0;
-
-/* nueva random */
-
-playRandomSong();
-
+function cambiarCancion() {
+  if (especialSonando) return; // 🔒 bloquea si especial está sonando
+  bgMusic.pause();
+  bgMusic.currentTime = 0;
+  playRandomSong();
 }
 
 // Tooltip en móvil para imágenes
