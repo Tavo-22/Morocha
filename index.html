@@ -441,17 +441,45 @@ font-style:italic;
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
+#pauseButton {
+  position: fixed;
+  bottom: 25px;
+  right: 220px;
+  z-index: 999;
+  background: #1d1610;
+  color: #ffcf8b;
+  border: 1px solid #ffcf8b;
+  padding: 10px 16px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  transition: .3s;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 130px;
+}
+
+#pauseButton:hover { transform: scale(1.05); }
+
+@media(max-width: 768px) {
+  #musicButton { right: 15px; bottom: 15px; }
+  #pauseButton { right: 155px; bottom: 15px; }
+}
+
 </style>
 </head>
 
 <body>
 
 <button id="musicButton" onclick="cambiarCancion()">
+☕ Se intento ser Dj, <br>botoncito de canciones
+</button> 
 
-☕ Se intento ser Dj, 
-botoncito de canciones
-
-</button>    
+<button id="pauseButton" onclick="pausarMusica()">
+  ⏸️ Pausar<br>música
+</button>
 
 <div class="stars"></div>
 
@@ -1097,6 +1125,17 @@ document.querySelectorAll('img[title]').forEach(img => {
     }, 2500);
   });
 });
+
+function pausarMusica() {
+  const btn = document.getElementById('pauseButton');
+  if (bgMusic.paused && !especialSonando) {
+    bgMusic.play();
+    btn.innerHTML = '⏸️ Pausar<br>música';
+  } else if (!bgMusic.paused) {
+    bgMusic.pause();
+    btn.innerHTML = '▶️ Reanudar<br>música';
+  }
+}
 
 </script>
 
