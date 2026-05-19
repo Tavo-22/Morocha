@@ -379,16 +379,16 @@ opacity:.7;
   background: #ffcf8b;
   color: #111;
   border: none;
-  padding: 10px 16px;
+  padding: 7px 12px;
   border-radius: 50px;
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(0,0,0,.25);
   transition: .3s;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   line-height: 1.5;
   text-align: center;
-  max-width: 130px;
+  max-width: 110px;
 }
 
 #musicButton:hover{
@@ -438,23 +438,25 @@ font-style:italic;
 }
 
 #pauseButton {
-  position: fixed;
-  bottom: 95px;
-  right: 15px;
-  z-index: 999;
+  position: fixed !important;
+  top: 15px !important;
+  right: 15px !important;
+  left: auto !important;
+  bottom: auto !important;
+  z-index: 9999;
   background: #1d1610;
   color: #ffcf8b;
   border: 1px solid #ffcf8b;
-  padding: 10px 16px;
+  padding: 7px 12px;
   border-radius: 50px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  box-shadow: 0 5px 15px rgba(0,0,0,.25);
   transition: .3s;
-  font-size: 0.75rem;
-  line-height: 1.5;
+  font-size: 0.65rem;
+  line-height: 1.4;
   text-align: center;
-  max-width: 130px;
+  max-width: 90px;
 }
 
 #pauseButton:hover { transform: scale(1.05); }
@@ -469,11 +471,11 @@ font-style:italic;
 
 <body>
 
-<button id="musicButton" onclick="cambiarCancion()">
+<button id="musicButton" onclick="cambiarCancion()" style="display: none;">
 ☕ Se intento ser Dj, <br>botoncito de canciones
 </button> 
 
-<button id="pauseButton" onclick="pausarMusica()">
+<button id="pauseButton" onclick="pausarMusica()" style="display: none;">
   ⏸️ Pausar<br>música
 </button>
 
@@ -1031,6 +1033,9 @@ function entrar(){
 document.querySelector('.hero').style.display='none';
 
 document.getElementById('contenido').style.display='block';
+
+document.getElementById('musicButton').style.display = 'block';
+document.getElementById('pauseButton').style.display = 'block';
 
 playRandomSong();
 
