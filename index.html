@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>para la jefa ☀️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#120d08;
+color:white;
+overflow-x:hidden;
+}
+
+/* STARS */
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+background-image:
+radial-gradient(white 1px, transparent 1px);
+background-size:50px 50px;
+opacity:.05;
+z-index:0;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
+url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1800&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+position:relative;
+}
+
+.sun{
+position:absolute;
+width:120px;
+height:120px;
+border-radius:50%;
+background:#ffb347;
+top:60px;
+right:80px;
+box-shadow:0 0 80px #ffb347;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+}
+
+.hero-content{
+max-width:900px;
+z-index:2;
+}
+
+.tag{
+color:#ffcf8b;
+letter-spacing:3px;
+margin-bottom:25px;
+font-size:.9rem;
+}
+
+.hero h1{
+font-size:5rem;
+line-height:1.1;
+margin-bottom:25px;
+white-space:pre-line;
+}
+
+.hero p{
+font-size:1.2rem;
+opacity:.9;
+margin-bottom:35px;
+}
+
+.enter-btn{
+padding:16px 35px;
+border:none;
+border-radius:50px;
+background:#ffcf8b;
+color:#111;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+font-size:1rem;
+}
+
+.enter-btn:hover{
+transform:scale(1.05);
+}
+
+/* GENERAL */
+
+section{
+padding:100px 10%;
+position:relative;
+z-index:2;
+}
+
+.section-title{
+font-size:3rem;
+margin-bottom:50px;
+color:#ffcf8b;
+}
+
+.card{
+background:#1d1610;
+border:1px solid rgba(255,255,255,.05);
+border-radius:25px;
+padding:35px;
+line-height:2;
+}
+
+/* PROFILE */
+
+.profile-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.profile-item{
+background:#221a13;
+padding:25px;
+border-radius:20px;
+transition:.3s;
+}
+
+.profile-item:hover{
+transform:translateY(-6px);
+}
+
+.profile-item h3{
+margin-bottom:15px;
+color:#ffcf8b;
+}
+
+/* COFFEE */
+
+.coffee-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.coffee-card{
+background:#1a140f;
+border-radius:25px;
+padding:30px;
+position:relative;
+overflow:hidden;
+}
+
+.coffee-card::before{
+content:"☕";
+position:absolute;
+right:15px;
+top:10px;
+font-size:4rem;
+opacity:.08;
+}
+
+.coffee-card h3{
+margin-bottom:15px;
+color:#ffcf8b;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:340px;
+object-fit:contain;
+background:#0f0b08;
+padding:5px;
+border-radius:20px;
+}
+
+.gallery img:hover{
+transform:scale(1.02);
+}
+
+/* VIDEOS */
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+align-items:start;
+}
+
+.media-box{
+width:100%;
+height:500px;
+background:#1a140f;
+border-radius:25px;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.media-box video,
+.media-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:25px;
+}
+
+/* NOTES */
+
+.notes{
+display:grid;
+gap:20px;
+}
+
+.note{
+background:#1c1510;
+padding:25px;
+border-left:5px solid #ffcf8b;
+border-radius:15px;
+font-family:'Caveat',cursive;
+font-size:2rem;
+}
+
+/* TIMELINE */
+
+.timeline{
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.timeline-item{
+background:#1b140f;
+border-left:4px solid #ffcf8b;
+padding:25px;
+border-radius:15px;
+}
+
+.timeline-date{
+color:#ffcf8b;
+font-weight:700;
+margin-bottom:10px;
+}
+
+/* FINAL */
+
+.final{
+text-align:center;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.fun-btn{
+padding:15px 28px;
+border:none;
+border-radius:40px;
+background:#ffcf8b;
+color:#111;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.fun-btn:hover{
+transform:scale(1.05);
+}
+
+#respuesta{
+margin-top:30px;
+font-size:1.3rem;
+color:#ffcf8b;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.8rem;
+}
+
+.section-title{
+font-size:2.1rem;
+}
+
+section{
+padding:70px 7%;
+}
+
+.note{
+font-size:1.6rem;
+}
+
+.sun{
+width:70px;
+height:70px;
+right:20px;
+top:30px;
+}
+
+}
+
+.special-link{
+
+color:#ffcf8b;
+text-decoration:underline;
+cursor:pointer;
+transition:.3s;
+
+}
+
+.special-link:hover{
+
+opacity:.7;
+
+}
+
+#musicButton{
+
+position:fixed;
+bottom:25px;
+right:25px;
+z-index:999;
+
+background:#ffcf8b;
+color:#111;
+
+border:none;
+padding:15px 20px;
+
+border-radius:50px;
+
+font-weight:700;
+cursor:pointer;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+transition:.3s;
+
+}
+
+#musicButton:hover{
+
+transform:scale(1.05);
+
+}
+
+body{
+
+-webkit-user-select:none;
+-ms-user-select:none;
+user-select:none;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<button id="musicButton" onclick="cambiarCancion()">
+
+☕ Se intento ser Dj
+
+</button>    
+
+<div class="stars"></div>
+
+<audio id="bgMusic"></audio>
+
+<audio id="specialSong">
+<source src="song/LATIN MAFIA - Yo siempre contesto. (Visualizer).mp3" type="audio/mp3">
+</audio>
+
+<div class="hero">
+
+<div class="sun"></div>
+
+<div class="hero-content">
+
+<div class="tag">
+RESERVA ESPECIAL PARA LA JEFITA DEL CAFÉ
+</div>
+
+<h1 id="typing"></h1>
+
+<p>
+esta página contiene:
+cafecito,
+kdramas,
+pollo,
+caos emocional
+y demasiadas fotos tuyas siendo arte.
+</p>
+
+<button class="enter-btn" onclick="entrar()">
+entrar bajo tu propio riesgo
+</button>
+
+</div>
+
+</div>
+
+<div id="contenido" style="display:none;">
+
+<section>
+
+<h2 class="section-title">
+archivo confidencial: marmota
+</h2>
+
+<div class="profile-grid">
+
+<div class="profile-item">
+<h3>☀️ clima ideal</h3>
+<p>
+mucho sol,
+mucho calor
+y probablemente café frío.
+</p>
+</div>
+
+<div class="profile-item">
+<h3>☕ especialidad</h3>
+<p>
+identificar cafés
+como científica profesional.
+</p>
+</div>
+
+<div class="profile-item">
+<h3>🐔 combustible principal</h3>
+<p>
+pollo.
+demasiado pollo.
+</p>
+</div>
+
+<div class="profile-item">
+<h3>🎬 actividad favorita</h3>
+<p>
+kdramas,
+música
+y hacerme extrañarte.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+frases históricas registradas
+</h2>
+
+<div class="profile-grid">
+
+<div class="profile-item">
+<h3>💬 frase #1</h3>
+<p>
+“carajo.”
+</p>
+</div>
+
+<div class="profile-item">
+<h3>💬 frase #2</h3>
+<p>
+“coño.”
+</p>
+</div>
+
+<div class="profile-item">
+<h3>💬 frase #3</h3>
+<p>
+“coño la madre.”
+</p>
+</div>
+
+<div class="profile-item">
+<h3>💬 frase #4</h3>
+<p>
+“aja.”
+</p>
+</div>
+
+<div class="profile-item">
+<h3>💬 frase #5</h3>
+<p>
+“a la madre.”
+</p>
+</div>
+
+<div class="profile-item">
+<h3>💬 teoría personal</h3>
+<p>
+cada una tenía
+mínimo 17 significados distintos.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+métodos de preparación según tú
+</h2>
+
+<div class="coffee-grid">
+
+<div class="coffee-card">
+<h3>Espresso</h3>
+<p>
+pequeña,
+intensa
+y peligrosa si no ha dormido.
+</p>
+</div>
+
+<div class="coffee-card">
+<h3>V60</h3>
+<p>
+requiere paciencia,
+detalle
+y claramente yo nunca aprendí suficiente.
+</p>
+</div>
+
+<div class="coffee-card">
+<h3>Cold Brew</h3>
+<p>
+parece tranquila...
+pero pega fuerte después.
+</p>
+</div>
+
+<div class="coffee-card">
+<h3>Aeropress</h3>
+<p>
+esto parece algo
+que usaría Hange Zoe en un laboratorio.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+la morochita siendo arte
+</h2>
+
+<div class="gallery">
+
+<img src="img/copitoDeNieve.jpg" title="Copito de nieve" draggable="false">
+<img src="img/rockera.jpg" title="Rockera" draggable="false">
+<img src="img/eleganciaLaDeFrancia.jpg" title="Elegancia la de Francia" draggable="false">
+<img src="img/modelo.jpg" title="Toda una modelo de Victoria Secret Fashion" draggable="false">
+<img src="img/Hange.jpg" title="Tú: Mami Hange Zoe" draggable="false">
+<img src="img/sonrisaQueMata.jpg" title="Sonrisa que me mata y revive al mismo tiempo" draggable="false">
+<img src="img/laDelCabelloPrecioso.jpg" title="La del cabello precioso" draggable="false">
+<img src="img/laTrabajadoraBonita.jpg" title="La trabajadora mas bonita del mundo mundial" draggable="false">
+<img src="img/arteLate.jpg" title="La dura del arte late bonito" draggable="false">
+<img src="img/laBellaYLaBestia.jpg" title="Marmotos, La Bella y la Bes... bueno ya sabes" draggable="false">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+momentos guardados
+</h2>
+
+<div class="video-grid">
+
+<div class="media-box">
+<video controls
+controlsList="nodownload"
+disablePictureInPicture
+draggable="false">
+<source src="videos/Mordidaa.mp4" type="video/mp4" title="La mordida a la camara">
+</video>
+</div>
+
+<div class="media-box">
+<img src="img/leGutaLaSopa.jpg" title="Juiciosita con la sopita" draggable="false">
+</div>
+
+<div class="media-box">
+<video controls
+controlsList="nodownload"
+disablePictureInPicture
+draggable="false">
+<source src="videos/Pollitooo.mp4" type="video/mp4" title="Le encanta el pollito">
+</video>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+pequeños momentos importantes
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<div class="timeline-date">
+inicio del caos
+</div>
+
+<div class="timeline-content">
+la primera vez que pensé:
+“ok... ya me llevó el putas.”
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">
+temporada café
+</div>
+
+<div class="timeline-content">
+cuando descubrí
+que existían demasiadas formas
+de preparar café.
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">
+temporada pollo
+</div>
+
+<div class="timeline-content">
+probablemente
+el pilar más fuerte de todo esto.
+</div>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">
+temporada kdrama
+</div>
+
+<div class="timeline-content">
+momentos donde claramente
+yo ya estaba enamorado.
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+notas encontradas en la cafetería
+</h2>
+
+<div class="notes">
+
+<div class="note">
+“hay personas que toman café para despertar...
+tú parecías vivir dentro de él.”
+</div>
+
+<div class="note">
+“todavía sospecho que puedes identificar cafés
+solo por el olor.”
+</div>
+
+<div class="note">
+“el sol te queda demasiado bien.”
+</div>
+
+<div class="note">
+“nunca entendí tanto de granos,
+pero sí aprendí tus formas de mirar.”
+</div>
+
+<div class="note">
+“aja...
+claramente yo ya estaba perdido.”
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">
+por si algún día lees esto con calma
+</h2>
+
+<div class="card">
+
+<p>
+
+sé que ahora mismo
+hay kilómetros entre nosotros.
+
+tú por allá,
+seguramente trabajando, el cafecito 
+o comiendo un rico pollito,
+con calorcito,
+viendo algo random
+y diciendo “coño” o "a la madre"
+por cualquier cosa.
+
+y yo acá con frío uy no jajaj,
+haciendo una página
+porque claramente las personas normales
+no hacen estas cosas.
+
+pero entre toda la distancia,
+las cosas raras,
+el tiempo
+y el silencio...
+
+hay algo que sigue siendo siempre bonito:
+
+haberte conocido.
+
+no hice esto para presionarte.
+ni para pedirte respuestas.
+
+solo quería dejar algo tan bonito y
+cálido en algún rincón del internet.
+
+algo que tuviera:
+sol,
+cafecito,
+pollito,
+caos,
+Hange tremenda personaje,
+y un poquito de ti.
+
+porque honestamente...
+
+eso merecía existir en algún lugar.
+
+aunque aja...
+sí extraño bastante
+todo contigo, las risas y las 
+loqueras, aquellos
+momentos random que solo nosotros
+entendiamos como también 
+nuestros enfados, todo.
+
+y siendo totalmente honesto...
+
+si algún día estos quieres hablarme denuevo,
+<span class="special-link" onclick="reproducirEspecial()">
+yo siempre contesto🎵.
+</span>
+
+</p>
+
+</div>
+
+</section>
+
+<section class="final">
+
+<h2 class="section-title">
+última cosa importante
+</h2>
+
+<p>
+bueno...
+igual el cafecito pendiente
+sí me lo debes.
+</p>
+
+<div class="buttons">
+
+<button class="fun-btn" onclick="mostrar()">
+depende
+</button>
+
+<button class="fun-btn" onclick="mostrar()">
+cafecito primero
+</button>
+
+<button class="fun-btn" onclick="mostrar()">
+tráigame pollo
+</button>
+
+</div>
+
+<div id="respuesta"></div>
+
+</section>
+
+</div>
+
+<script>
+    document.addEventListener("contextmenu",(e)=>{
+e.preventDefault();
+});
+
+/* TYPEWRITER */
+
+const texto =
+`la niña del sol,
+las pequitas bonitas
+y amante del pollito asado ☀️`;
+
+let i = 0;
+
+function escribir(){
+
+if(i < texto.length){
+
+document.getElementById("typing").innerHTML += texto.charAt(i);
+
+i++;
+
+setTimeout(escribir,50);
+
+}
+
+}
+
+escribir();
+
+/* SONGS RANDOM */
+
+const songs = [
+"song/BadBunny1.mp3",
+"song/EladioCarrion1.mp3",
+"song/FuerzaRegida1.mp3",
+"song/GrupoFrontera1.mp3",
+"song/Lp1.mp3",
+"song/Lp2.mp3",
+"song/PauloLondra1.mp3",
+"song/PauloLondra2.mp3"
+];
+
+const bgMusic =
+document.getElementById("bgMusic");
+
+bgMusic.volume = 0.25;
+
+/* copia temporal */
+
+let remainingSongs = [...songs];
+
+function playRandomSong(){
+
+/* si ya sonaron todas */
+
+if(remainingSongs.length === 0){
+
+/* reinicia lista */
+
+remainingSongs = [...songs];
+
+}
+
+/* canción random */
+
+const randomIndex =
+Math.floor(Math.random() * remainingSongs.length);
+
+const selectedSong =
+remainingSongs[randomIndex];
+
+/* eliminar para no repetir */
+
+remainingSongs.splice(randomIndex,1);
+
+/* reproducir */
+
+bgMusic.src = selectedSong;
+
+bgMusic.play();
+
+}
+
+/* cuando termina una canción, pone otra random */
+
+bgMusic.addEventListener("ended",()=>{
+
+/* pausa pequeña entre canciones */
+
+setTimeout(()=>{
+
+playRandomSong();
+
+}, 4000); // 4 segundos
+
+});
+
+/* ENTER */
+
+function entrar(){
+
+document.querySelector('.hero').style.display='none';
+
+document.getElementById('contenido').style.display='block';
+
+playRandomSong();
+
+}
+
+/* RESPUESTAS */
+
+const frases = [
+
+"la jefa analizará la propuesta.",
+"cafecito primero y luego vemos.",
+"respuesta pendiente hasta nuevo aviso.",
+"el pollo claramente influye en la decisión.",
+"procesando sentimientos igual que un V60.",
+"las pequitas bonitas han hablado.",
+"tal vez en otra temporada del kdrama.",
+"coño... eso estuvo bonito.",
+"aja, veremos.",
+"carajo, qué sujeto tan intenso."
+
+];
+
+function mostrar(){
+
+const random =
+frases[Math.floor(Math.random()*frases.length)];
+
+document.getElementById('respuesta').innerText=random;
+
+}
+
+/* LATIN MAFIA MOMENT */
+
+function reproducirEspecial(){
+
+const special =
+document.getElementById("specialSong");
+
+/* pausa música random */
+
+bgMusic.pause();
+
+/* reinicia canción especial */
+
+special.pause();
+
+special.currentTime = 0;
+
+/* volumen */
+
+special.volume = 0.45;
+
+/* reproduce */
+
+special.play();
+
+}
+
+/* cuando termina la especial */
+
+document
+.getElementById("specialSong")
+.addEventListener("ended",()=>{
+
+/* vuelve música normal */
+
+setTimeout(()=>{
+
+playRandomSong();
+
+},3000);
+
+});
+
+function cambiarCancion(){
+
+/* detiene actual */
+
+bgMusic.pause();
+
+/* reinicia */
+
+bgMusic.currentTime = 0;
+
+/* nueva random */
+
+playRandomSong();
+
+}
+
+</script>
+
+</body>
+</html>
