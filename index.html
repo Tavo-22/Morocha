@@ -418,6 +418,29 @@ font-style:italic;
 
 }
 
+#img-tooltip {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(26,20,15,0.95);
+  border: 1px solid #ffcf8b;
+  color: #ffcf8b;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  z-index: 9999;
+  text-align: center;
+  max-width: 80vw;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  animation: fadeInUp 0.3s ease;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
 </style>
 </head>
 
@@ -623,7 +646,7 @@ la morochita siendo arte
 
 <div class="gallery">
 
-<img src="img/copitoDeNieve.jpg" title="Copito de nieve" draggable="false">
+<img src="img/copitoDeNieve.jpg" title="Copito de nieve"  draggable="false">
 <img src="img/rockera.jpg" title="Rockera" draggable="false">
 <img src="img/eleganciaLaDeFrancia.jpg" title="Elegancia la de Francia" draggable="false">
 <img src="img/modelo.jpg" title="Toda una modelo de Victoria Secret Fashion" draggable="false">
@@ -1074,7 +1097,22 @@ playRandomSong();
 
 }
 
+// Tooltip en móvil para imágenes
+document.querySelectorAll('img[title]').forEach(img => {
+  img.addEventListener('click', () => {
+    const tooltip = document.getElementById('img-tooltip');
+    tooltip.textContent = img.title;
+    tooltip.style.display = 'block';
+    clearTimeout(window._tooltipTimer);
+    window._tooltipTimer = setTimeout(() => {
+      tooltip.style.display = 'none';
+    }, 2500);
+  });
+});
+
 </script>
+
+<div id="img-tooltip"></div>
 
 </body>
 </html>
